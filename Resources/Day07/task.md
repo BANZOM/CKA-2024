@@ -1,14 +1,33 @@
-## Task 5/40
+## Task 7/40
 
 
-1. **Task Details**
-- Document your learnings from the video
-- Create the Kubernetes Architecture diagram using the tool of your choice. You can use eraser.io, draw.io, excalidraw, or anything else.
-- Create a diagram of the end-to-end flow depicting what happens when you run a Kubectl command.
-- Write the function of each control plane component in the most straightforward possible language.
-- Include a small write-up about the pod and container.
-Remember to include references in your blog, to the video, and to any documentation that you follow.
+1. **Task Details** ☕️
+- Document what you learned from the video in a blog, embed the video, and include all the references in the blog.
 
+**Task 1**
+- Create a pod using the imperative command and use nginx as the image
+
+**Task2**
+- Create the YAML from the nginx pod created in task 1
+- Update the pod name in the YAML
+- Use that YAML to create a new pod with the name nginx-new.
+
+**Task3**
+- Apply the below YAML and fix the errors, including all the commands that you run during the troubleshooting and the error message
+
+```YAML
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: test
+  name: redis
+spec:
+  containers:
+  - image: rediss
+    name: redis
+    
+```
 2. **Share your learnings**: Document your key takeaways and insights in a blog post and social media update
 3. **Make it public**: Share what you learn publicly on LinkedIn or Twitter.
    - **Tag us and use the hashtag**: Include the following in your post:
@@ -19,3 +38,4 @@ Remember to include references in your blog, to the video, and to any documentat
 ## Blog Post Focus 📝
 
 - **Clarity is essential**: Write your blog post clearly and concisely, making it easy for anyone to grasp the concepts, regardless of their prior Kubernetes experience.
+
