@@ -1,0 +1,1 @@
+kubectl run pod --image=nginx --restart=Never --dry-run=client -o yaml > imperative-pod.yaml

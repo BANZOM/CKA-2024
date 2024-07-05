@@ -1,0 +1,18 @@
+kubectl create -f declarative.yaml
+or
+kubectl apply -f declarative.yaml
+
+For troubleshooting, you can use the following command:
+kubectl describe pod <pod-name>
+
+Editing the pod within the cluster:
+kubectl edit pod <pod-name>
+
+Accessing the pod:
+kubectl exec -it <pod-name> -- /bin/bash
+
+Extend details:
+kubectl get pods -o wide
+
+Deleting the pod:
+kubectl delete pod <pod-name>

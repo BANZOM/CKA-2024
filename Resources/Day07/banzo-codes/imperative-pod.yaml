@@ -1,0 +1,16 @@
+# Auto-generated
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod
+  name: pod
+spec:
+  containers:
+  - image: nginx
+    name: pod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

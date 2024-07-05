@@ -1,0 +1,20 @@
+aditya@banzo:~/Development/GitHub/CKA-2024$ kind get clusters
+kind-cluster
+multinode-cluster
+aditya@banzo:~/Development/GitHub/CKA-2024$ kubectl config get-contexts 
+CURRENT   NAME                     CLUSTER                  AUTHINFO                 NAMESPACE
+          kind-kind-cluster        kind-kind-cluster        kind-kind-cluster        
+*         kind-multinode-cluster   kind-multinode-cluster   kind-multinode-cluster   
+aditya@banzo:~/Development/GitHub/CKA-2024$ kubectl config use-context kind-kind-cluster
+Switched to context "kind-kind-cluster".
+aditya@banzo:~/Development/GitHub/CKA-2024$ kubectl get nodes
+NAME                         STATUS   ROLES           AGE   VERSION
+kind-cluster-control-plane   Ready    control-plane   11h   v1.29.4
+aditya@banzo:~/Development/GitHub/CKA-2024$ kubectl config use-context kind-multinode-cluster 
+Switched to context "kind-multinode-cluster".
+aditya@banzo:~/Development/GitHub/CKA-2024$ kubectl get nodes 
+NAME                              STATUS   ROLES           AGE   VERSION
+multinode-cluster-control-plane   Ready    control-plane   10h   v1.29.4
+multinode-cluster-worker          Ready    <none>          10h   v1.29.4
+multinode-cluster-worker2         Ready    <none>          10h   v1.29.4
+aditya@banzo:~/Development/GitHub/CKA-2024$ 
